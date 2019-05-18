@@ -1,5 +1,5 @@
 # Blocky - A Puzzle Game
-Blocky is currently in version **0.7**
+Blocky is currently in version **0.75**
 
 ### Concept
 Blocky is a randomly generated maze-like game with a simple goal.
