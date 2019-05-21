@@ -1,6 +1,5 @@
   <html>
     <head>
-      <script src="script.js"></script>
  <style>
    object{
     text-align:center; 
@@ -92,5 +91,21 @@ a:active {
       <h2>Made 100% in Processing 3.5.3 (Java)</h2>
       <h3>Concept</h3>
 <h5>Blocky is a randomly generated maze-like game with a simple goal. You start at the green tile and can move using WASD, your goal is to reach the red tile. The catch is that once you start moving, you can't stop 'till you hit a wall.</h5></div>
+   <script>
+     function load() {
+    var file = new XMLHttpRequest();
+    file.open("GET", "http://remote.tld/random.txt", true);
+    file.onreadystatechange = function() {
+      if (file.readyState === 4) {  // Makes sure the document is ready to parse
+        if (file.status === 200) {  // Makes sure it's found the file
+          text = file.responseText;
+          document.getElementById("div1").innerHTML = text;
+        }
+      }
+    }
+}
+
+window.onLoad = load();
+      </script>
     </body>
   </html>
