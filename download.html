@@ -1,6 +1,19 @@
 <!DOCTYPE Html>
   <html>
     <head>
+               <script>
+     function load() {
+var client = new XMLHttpRequest();
+client.open('GET', 'https://raw.githubusercontent.com/metype/Blocky/master/version.txt');
+client.onreadystatechange = function() {
+  text = client.responseText;
+          document.getElementById("version").innerHTML = "Version : "+text;
+}
+client.send();
+}
+
+window.onLoad = load();
+      </script>
       <style>
         body {
          background-color:grey; 
@@ -88,7 +101,7 @@ a:active {
       <title>Blocky by Metype</title>
       <header>
         <h1>Blocky by Metype</h1>
-        <p>Version : <?php include('version.txt'); ?></p>
+        <h5 id="version"></h5>
               <a href="index.html">Home</a>
       </header>
     <div>
