@@ -2,16 +2,13 @@
     <head>
          <script>
      function load() {
-    var file = new XMLHttpRequest();
-    file.open("GET", "https://raw.githubusercontent.com/metype/Blocky/master/version.txt", true);
-    file.onreadystatechange = function() {
-      if (file.readyState === 4) {  // Makes sure the document is ready to parse
-        if (file.status === 200) {  // Makes sure it's found the file
-          text = file.responseText;
-          document.getElementById("version").innerHTML = "Version :"+text;
-        }
-      }
-    }
+var client = new XMLHttpRequest();
+client.open('GET', 'https://raw.githubusercontent.com/metype/Blocky/master/version.txt');
+client.onreadystatechange = function() {
+  text = client.responseText;
+          document.getElementById("version").innerHTML = "Version : "+text;
+}
+client.send();
 }
 
 window.onLoad = load();
