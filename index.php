@@ -83,7 +83,7 @@ a:active {
       <title>Blocky by Metype</title>
       <header>
          <h1>Blocky by Metype</h1>
-        <h5>Version:<object data="version.txt"></object></h5>
+        <p>Version:<?php include('version.txt'); ?></p>
 <a href="download.html">Download</a>
       </header>
     
